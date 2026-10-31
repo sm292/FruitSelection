@@ -1,128 +1,338 @@
 
-# FruitSelection: Deep Learning-Based Fruit Image Classification
+<div align="center">
 
-## Project Overview
+# 🍎 FruitSelection
+### Deep Learning | Computer Vision | Image Classification
 
-FruitSelection is a computer vision project focused on classifying fruit images using deep learning techniques. The repository includes a Jupyter Notebook for the classification workflow and a saved model (`model.h5`) for model-related experimentation.
+**An intelligent fruit classification project using Convolutional Neural Networks (CNN), Python, and TensorFlow/Keras.**
 
-The project demonstrates how image data and machine learning can be used to explore automated fruit recognition, with potential applications in agriculture, food processing, inventory management, and quality inspection.
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange?logo=tensorflow)](https://www.tensorflow.org/)
+[![Keras](https://img.shields.io/badge/Keras-Neural%20Networks-red?logo=keras)](https://keras.io/)
+[![Computer Vision](https://img.shields.io/badge/Computer-Vision-green)](https://opencv.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)](https://jupyter.org/)
 
-## Objectives
+[Explore Notebook](Fruit_Classification.ipynb) •
+[View Trained Model](model.h5) •
+[GitHub Repository](https://github.com/sm292/FruitSelection)
 
-- Explore image classification using deep learning.
-- Understand image preprocessing and preparation for model training.
-- Develop and evaluate a model for recognizing fruit images.
-- Save a trained model for potential reuse during inference.
-- Explore computer vision applications in agricultural automation.
+</div>
 
-## Technology Stack
+---
 
-- **Programming:** Python
-- **Development:** Jupyter Notebook
-- **Machine Learning:** Deep Learning and Image Classification
-- **Model Artifact:** HDF5 (`model.h5`)
-- **Libraries:** Verify the exact libraries used in the notebook.
+## 📌 Project Overview
 
-## Repository Structure
+FruitSelection is a Deep Learning-based Computer Vision project designed to explore automated fruit image classification using Convolutional Neural Networks (CNN).
+
+The project focuses on analyzing fruit images, understanding image characteristics, preprocessing visual data, and developing a classification model capable of recognizing multiple fruit categories.
+
+It combines image processing, exploratory data analysis, visualization, and deep learning to demonstrate how AI can support automated fruit recognition.
+
+### 🎯 Project Objectives
+
+- Develop a CNN-based fruit image classification model.
+- Explore image datasets and class distributions.
+- Perform image preprocessing and pixel-level analysis.
+- Understand visual patterns through histograms and heatmaps.
+- Train and evaluate a deep learning model.
+- Save the trained model for future inference.
+- Explore practical applications of Computer Vision in agriculture and food processing.
+
+---
+
+## 📸 Project Visualizations
+
+### 1. Fruit Classification – Class Definition
+
+Visual representation of the different fruit categories included in the classification dataset.
+
+<p align="center">
+  <img src="class-definition.png" width="95%" alt="Fruit classification class definitions">
+</p>
+
+### 2. Training Dataset – Class Distribution
+
+Analysis of the distribution of fruit images across different classes.
+
+<p align="center">
+  <img src="training-class-domain.png" width="90%" alt="Training dataset class distribution">
+</p>
+
+**Key observation:** The distribution visualization helps identify differences in the number of available training images across fruit categories.
+
+### 3. Image Pixel Analysis – Apple
+
+Pixel intensity distribution of an Apple Braeburn image, illustrating the variation in image pixel values.
+
+<p align="center">
+  <img src="histogram-apple.png" width="85%" alt="Apple image pixel intensity histogram">
+</p>
+
+### 4. Orange Class – Pixel Value Distribution
+
+Visualization of pixel intensity distribution for the Orange class.
+
+<p align="center">
+  <img src="orange-class-pixel-value.png" width="85%" alt="Orange class pixel value histogram">
+</p>
+
+### 5. Image Heatmap – Peach
+
+A heatmap visualization of a Peach image showing spatial pixel intensity variations.
+
+<p align="center">
+  <img src="heat-map-peach.png" width="75%" alt="Peach image heatmap">
+</p>
+
+### 6. CNN Model – Training and Testing Performance
+
+Training and validation accuracy and loss across 25 epochs.
+
+<p align="center">
+  <img src="training-testing-accuracy-measures.png" width="95%" alt="CNN training and validation accuracy and loss">
+</p>
+
+**Performance observations:**
+- Training accuracy increases rapidly during the initial epochs.
+- Validation accuracy approaches 100% in the recorded training history.
+- Training and validation losses decrease significantly.
+- Further independent testing is recommended to assess generalization.
+
+---
+
+## 📊 Dataset Overview
+
+The project uses the Fruit Recognition dataset.
+
+**Dataset Source:** [Kaggle – Fruit Recognition](https://www.kaggle.com/datasets/sshikamaru/fruit-recognition)
+
+| Dataset Component | Description |
+|---|---|
+| Data Type | Digital fruit images |
+| Classification | Multiclass image classification |
+| Input | RGB images |
+| Image Processing | Resizing and pixel analysis |
+| Target | Fruit category |
+| Learning Approach | Supervised Deep Learning |
+
+The dataset covers different fruit and produce categories, including apples, bananas, oranges, grapes, mangoes, strawberries, and more.
+
+---
+
+## 🧠 Deep Learning Approach
+
+The project explores a Convolutional Neural Network (CNN) for image classification.
+
+### Model Development Workflow
+
+```text
+Fruit Image Dataset
+        |
+        ▼
+Image Loading
+        |
+        ▼
+Exploratory Data Analysis
+        |
+        ▼
+Image Preprocessing
+        |
+        ▼
+Feature Extraction
+        |
+        ▼
+CNN Architecture
+        |
+        ▼
+Model Training
+        |
+        ▼
+Performance Evaluation
+        |
+        ▼
+Saved Model (model.h5)
+        |
+        ▼
+Fruit Classification
+```
+
+### Model Training
+
+| Parameter | Description |
+|---|---|
+| Model | Convolutional Neural Network |
+| Framework | TensorFlow / Keras |
+| Optimizer | Adam |
+| Loss Function | Categorical Crossentropy |
+| Output | Multiclass classification |
+| Training Epochs | 25 |
+| Batch Size | 128 |
+
+---
+
+## 📈 Training Performance
+
+The recorded training visualization demonstrates the following trends:
+
+| Metric | Observation |
+|---|---|
+| Training Accuracy | Approaches 100% |
+| Validation Accuracy | Approaches 100% |
+| Training Loss | Decreases significantly |
+| Validation Loss | Decreases significantly |
+
+*These are observations from the recorded training curves, not a substitute for independent test-set evaluation.*
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Application |
+|---|---|
+| Python | Programming |
+| TensorFlow | Deep Learning |
+| Keras | Neural Network Development |
+| NumPy | Numerical Computation |
+| Pandas | Data Manipulation |
+| Matplotlib | Data Visualization |
+| Seaborn | Statistical Visualization |
+| OpenCV | Image Processing |
+| Scikit-learn | Machine Learning Utilities |
+| Jupyter Notebook | Model Development |
+
+---
+
+## 📁 Repository Structure
 
 ```text
 FruitSelection/
+│
 ├── Fruit_Classification.ipynb
+│
 ├── model.h5
+│
+├── class-definition.png
+│
+├── heat-map-peach.png
+│
+├── histogram-apple.png
+│
+├── orange-class-pixel-value.png
+│
+├── training-class-domain.png
+│
+├── training-testing-accuracy-measures.png
+│
 └── README.md
 ```
 
-| File | Description |
-|---|---|
-| `Fruit_Classification.ipynb` | Notebook containing the fruit classification workflow. |
-| `model.h5` | Saved model artifact intended for reuse or inference. |
-| `README.md` | Project documentation. |
+---
 
-## Project Workflow
-
-1. **Data Preparation:** Load and inspect the image dataset.
-2. **Image Preprocessing:** Prepare images in the format required by the model.
-3. **Model Development:** Build or train a deep learning classifier.
-4. **Model Evaluation:** Evaluate classification performance using appropriate metrics.
-5. **Model Saving:** Store the model for potential reuse.
-6. **Inference:** Use the saved model to generate predictions for compatible input images.
-
-*Confirm the exact steps against the notebook before treating this as a complete description of the implementation.*
-
-## Potential Applications
-
-- Automated fruit recognition
-- Agricultural image analysis
-- Fruit sorting and categorization
-- Food inventory management
-- Computer vision-based quality inspection
-
-These are potential applications, not claims that the repository currently implements a production system.
-
-## Getting Started
+## 🚀 Installation & Execution
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/sm292/FruitSelection.git
+
 cd FruitSelection
 ```
 
-### 2. Create a Python environment
+### 2. Create a virtual environment
 
 ```bash
-python -m venv .venv
+python -m venv venv
 ```
 
-Activate it on Windows:
+Activate on Windows:
 
 ```bash
-.venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 ### 3. Install dependencies
 
-Review the notebook imports and install the required packages. For example, if the notebook uses TensorFlow:
-
 ```bash
-pip install tensorflow jupyter numpy pandas matplotlib scikit-learn
+pip install tensorflow numpy pandas matplotlib seaborn scikit-learn opencv-python pillow jupyter
 ```
 
-### 4. Open the notebook
+### 4. Launch Jupyter Notebook
 
 ```bash
 jupyter notebook Fruit_Classification.ipynb
 ```
 
-Run the notebook cells in sequence, ensuring the required dataset paths and dependencies are available.
+Run the notebook cells sequentially after configuring the dataset paths.
 
-## Evaluation and Results
+---
 
-Document the actual model performance after checking the notebook. Recommended metrics include:
+## 💾 Saved Deep Learning Model
 
-- Accuracy
-- Precision, recall, and F1-score
-- Confusion matrix
-- Training and validation loss
-- Training and validation accuracy
+The repository includes the trained model:
 
-Do not report performance figures until they have been verified from the model evaluation.
+**`model.h5`**
 
-## Future Enhancements
+Load the model using TensorFlow:
 
-- Build an interactive image-upload interface.
-- Add prediction confidence scores.
-- Display a confusion matrix and classification report.
-- Improve generalization through data augmentation and model tuning.
-- Deploy a lightweight inference application.
-- Extend the classifier to additional fruit categories, if supported by suitable data.
+```python
+from tensorflow.keras.models import load_model
 
-## Skills Demonstrated
+model = load_model("model.h5")
 
-Python, Deep Learning, Computer Vision, Image Classification, Image Preprocessing, Model Training, Model Evaluation, Jupyter Notebook, and Machine Learning Workflow.
+model.summary()
+```
 
-## Author
+The model can be used for further experimentation and compatible image classification workflows.
+
+---
+
+## 🌍 Real-World Applications
+
+| Industry | Potential Application |
+|---|---|
+| Agriculture | Automated fruit recognition |
+| Food Processing | Fruit sorting and categorization |
+| Retail | Automated produce identification |
+| Inventory Management | Fruit category recognition |
+| Quality Inspection | Computer vision-assisted inspection |
+| Agricultural Research | Image-based fruit analysis |
+
+---
+
+## 🔮 Future Enhancements
+
+- [ ] Develop an interactive Streamlit application.
+- [ ] Implement real-time fruit recognition using a webcam.
+- [ ] Add image upload and prediction functionality.
+- [ ] Display prediction confidence scores.
+- [ ] Generate a confusion matrix and classification report.
+- [ ] Experiment with MobileNetV2 and EfficientNet.
+- [ ] Improve model generalization.
+- [ ] Deploy the model as an interactive web application.
+
+---
+
+## 🎓 Skills Demonstrated
+
+`Python` `Deep Learning` `Machine Learning` `Computer Vision` `CNN` `TensorFlow` `Keras` `Image Processing` `Image Classification` `Exploratory Data Analysis` `Data Visualization` `Neural Networks`
+
+---
+
+## 👨‍💻 Author
 
 **Sumit Mondal**
 
-GitHub: https://github.com/sm292
+Data Science | Machine Learning | Deep Learning | Computer Vision
+
+- GitHub: [@sm292](https://github.com/sm292)
+- Project: [FruitSelection](https://github.com/sm292/FruitSelection)
+
+---
+
+<div align="center">
+
+### ⭐ If you find this project useful, consider giving it a star!
+
+**Building intelligent solutions through Data Science and Artificial Intelligence.**
+
+</div>
